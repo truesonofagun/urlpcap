@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from parser import parserVar
+from parserCLI import parserVar
 
 def start():
     parserVar()
