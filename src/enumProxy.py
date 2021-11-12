@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 
-from twisted.web import proxy, http
-from twisted.internet import reactor
-from twisted.python import log
-import sys
-log.startLogging(sys.stdout)
+# import scapy
+# TODO: construct the URL and then enumerate the URL here then parsing file
 
-class ProxyFactory(http.HTTPFactory):
-    protocol = proxy.Proxy
-
-reactor.listenTCP(1024, ProxyFactory())
-reactor.run()
-
+"""
+Found the correct way to send a URL request in stackover flow
+a=Ether()/IP(dst="www.example.com")/TCP()/"GET /index.html HTTP/1.0 \n\n"
+scapy is able to save this into a pcap file for latter
+The URL will need to be deconstructed and reconstructed
+Check https://scapy.readthedocs.io/en/latest/ for more on how
+"""
