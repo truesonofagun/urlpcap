@@ -1,4 +1,8 @@
 #!/bin/usr/env python3
 
-# import urllib.parse
-# TODO: take url from CLI parse and send decoded URL
+from urllib.parse import urlparse
+
+
+def url_parse(u):
+    d = urlparse(u)
+    return d

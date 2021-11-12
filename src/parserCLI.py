@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+from parserURL import url_parse
 
 
 def parserVar():
@@ -14,3 +15,5 @@ def parserVar():
 if __name__ == '__main__':
     url = parserVar()
     print(url.url)
+    decode = url_parse(url.url)
+    print(decode)
