@@ -2,8 +2,15 @@
 
 import argparse
 
+
 def parserVar():
-    parser = argparse.ArgumentParser(description='Enumerating URL to capture pcap file of traffic')
-    parser.add_argument('-f', '--foo', help='templete for this project', action='store_true', default=False)
+    parser = argparse.ArgumentParser(description='Enumerating URL to capture request and reponse and put into a pcap file or print')
+    parser.add_argument('url', metavar='www.url.com', help='URL for enumeration')
 
     parsed = parser.parse_args()
+    return parsed
+
+
+if __name__ == '__main__':
+    url = parserVar()
+    print(url.url)
