@@ -1,7 +1,14 @@
 #!/usr/bin/env python3
 
+from urllib.parse import urlparse
 # import scapy
 # TODO: construct the URL and then enumerate the URL here then parsing file
+
+
+def url_parse(u):
+    d = urlparse(u)
+    return d
+
 
 """
 Found the correct way to send a URL request in stackover flow

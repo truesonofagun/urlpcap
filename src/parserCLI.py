@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-from parserURL import url_parse
+from enumProxy import url_parse
 
 
 def parserVar():
